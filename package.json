@@ -1,0 +1,28 @@
+{
+  "name": "learn-jest",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "description": "学习 jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudyan/learn-jest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cloudyan/learn-jest/issues"
+  },
+  "homepage": "https://github.com/cloudyan/learn-jest#readme",
+  "devDependencies": {
+    "jest": "26.6.3",
+    "lerna": "^4.0.0"
+  }
+}
