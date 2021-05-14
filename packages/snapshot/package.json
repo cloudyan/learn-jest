@@ -15,7 +15,7 @@
     "react-test-renderer": "*"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --no-cache"
   },
   "jest": {
     "testEnvironment": "node"

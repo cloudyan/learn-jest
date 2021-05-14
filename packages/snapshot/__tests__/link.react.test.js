@@ -4,42 +4,52 @@
 
 import React from 'react';
 import Link from '../Link.react';
-import renderer from 'react-test-renderer';
+import { create, act } from 'react-test-renderer';
 
 it('renders correctly', () => {
-  const tree = renderer
-    .create(<Link page="http://www.facebook.com">Facebook</Link>)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+  let tree;
+  act(() => {
+    tree = create(<Link page="http://www.facebook.com">Facebook</Link>);
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 it('renders as an anchor when no page is set', () => {
-  const tree = renderer.create(<Link>Facebook</Link>).toJSON();
-  expect(tree).toMatchSnapshot();
+  let tree;
+  act(() => {
+    tree = create(<Link>Facebook</Link>)
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 it('properly escapes quotes', () => {
-  const tree = renderer
-    .create(<Link>{"\"Facebook\" \\'is \\ 'awesome'"}</Link>)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+  let tree;
+  act(() => {
+    tree = create(<Link>{"\"Facebook\" \\'is \\ 'awesome'"}</Link>)
+  });
+  expect(tree.toJSON()).toMatchSnapshot();
 });
 
 it('changes the class when hovered', () => {
-  const component = renderer.create(
-    <Link page="http://www.facebook.com">Facebook</Link>,
-  );
+  let component;
+  act(() => {
+    component = create(<Link page="http://www.facebook.com">Facebook</Link>);
+  });
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 
   // manually trigger the callback
-  tree.props.onMouseEnter();
+  act(() => {
+    tree.props.onMouseEnter();
+  });
   // re-rendering
   tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 
   // manually trigger the callback
-  tree.props.onMouseLeave();
+  act(() => {
+    tree.props.onMouseLeave();
+  });
   // re-rendering
   tree = component.toJSON();
   expect(tree).toMatchSnapshot();
