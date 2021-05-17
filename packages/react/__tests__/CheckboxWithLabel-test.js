@@ -1,5 +1,8 @@
 // Copyright 2004-present Facebook. All Rights Reserved.
 
+// 测试技巧
+// https://zh-hans.reactjs.org/docs/testing-recipes.html
+
 import React, {createRef} from 'react';
 
 import * as TestUtils from 'react-dom/test-utils';

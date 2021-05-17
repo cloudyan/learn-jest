@@ -6,8 +6,9 @@ module.exports = {
     [
       '@babel/plugin-proposal-class-properties',
       {
-        loose: true,
+        // loose: true,
       },
     ],
+    ['@babel/plugin-transform-runtime'],
   ],
 };

@@ -18,6 +18,8 @@ it('works with promises', () => {
   return user.getUserName(4).then(data => expect(data).toEqual('Mark'));
 });
 
+
+
 // async/await can be used.
 it('works with async/await', async () => {
   expect.assertions(1);
@@ -31,6 +33,9 @@ it('works with async/await and resolves', async () => {
   await expect(user.getUserName(5)).resolves.toEqual('Paul');
 });
 
+
+
+// Reject
 // Testing for async errors using `.rejects`.
 it('tests error with rejects', () => {
   expect.assertions(1);
@@ -38,6 +43,15 @@ it('tests error with rejects', () => {
     error: 'User with 3 not found.',
   });
 });
+
+// Or using async/await with `.rejects`.
+it('tests error with async/await and rejects', async () => {
+  expect.assertions(1);
+  await expect(user.getUserName(3)).rejects.toEqual({
+    error: 'User with 3 not found.',
+  });
+});
+
 
 // Testing for async errors using Promise.catch.
 test('tests error with promises', async () => {
@@ -61,10 +75,4 @@ it('tests error with async/await', async () => {
   }
 });
 
-// Or using async/await with `.rejects`.
-it('tests error with async/await and rejects', async () => {
-  expect.assertions(1);
-  await expect(user.getUserName(3)).rejects.toEqual({
-    error: 'User with 3 not found.',
-  });
-});
+

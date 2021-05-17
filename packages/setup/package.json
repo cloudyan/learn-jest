@@ -1,7 +1,7 @@
 {
   "private": true,
   "version": "0.0.0",
-  "name": "example-snapshot",
+  "name": "example-setup",
   "dependencies": {
     "react": "*"
   },
@@ -15,9 +15,14 @@
     "react-test-renderer": "*"
   },
   "scripts": {
-    "test": "jest --color --no-cache --verbose --coverage"
+    "test": "jest --no-cache --verbose --coverage"
   },
   "jest": {
     "testEnvironment": "node"
-  }
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

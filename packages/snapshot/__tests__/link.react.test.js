@@ -6,6 +6,9 @@ import React from 'react';
 import Link from '../Link.react';
 import { create, act } from 'react-test-renderer';
 
+// [act()](https://zh-hans.reactjs.org/docs/test-utils.html#act)
+// 为断言准备一个组件，包裹要渲染的代码并在调用 act() 时执行更新。这会使得测试更接近 React 在浏览器中的工作方式。
+
 it('renders correctly', () => {
   let tree;
   act(() => {

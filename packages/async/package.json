@@ -5,6 +5,7 @@
   "devDependencies": {
     "@babel/core": "*",
     "@babel/preset-env": "*",
+    "axios": "0.21.1",
     "babel-jest": "*",
     "jest": "*"
   },
