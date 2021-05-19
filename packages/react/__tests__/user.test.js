@@ -31,7 +31,6 @@ it('渲染用户数据', async () => {
   };
 
   // jest.spyOn()是jest.fn()的语法糖，它创建了一个和被spy的函数具有相同内部代码的mock函数
-
   jest.spyOn(global, 'fetch').mockImplementation(() => {
     console.log(111);
     return Promise.resolve({

@@ -26,3 +26,13 @@ describe('outer', () => {
 
   console.log('describe outer-c'); // 5
 });
+
+
+// describe outer-a
+// describe inner 1
+// describe outer-b
+// describe inner 2
+// describe outer-c
+// test for describe inner 1
+// test for describe outer
+// test for describe inner 2

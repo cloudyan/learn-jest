@@ -6,7 +6,7 @@ export default function User(props) {
   const [user, setUser] = useState(null);
 
   async function fetchUserData(id) {
-    const response = await fetch('/' + id);
+    const response = await window.fetch('/' + id);
     setUser(await response.json());
   }
 
