@@ -17,6 +17,6 @@
     "jest": "*"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest --no-cache"
   }
 }

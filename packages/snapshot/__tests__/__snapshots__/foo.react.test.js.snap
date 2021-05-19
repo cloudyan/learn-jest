@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Bar /> renders correctly 1`] = `
+<div
+  className="title"
+>
+  xxx
+</div>
+`;
+
+exports[`<Bar /> test1 1`] = `
+<div
+  className="in-bar"
+>
+  <div
+    className="in-foo"
+    foo="bar"
+  >
+    InFoo
+  </div>
+</div>
+`;
+
+exports[`<Foo /> should render without throwing an error 1`] = `
+<h1
+  className="title"
+>
+  First Demo
+</h1>
+`;
+
+exports[`<Foo /> should render without throwing an error 1 1`] = `
+<h1
+  className="title"
+>
+  First Demo
+  <p
+    className="p"
+  >
+    test
+  </p>
+</h1>
+`;
