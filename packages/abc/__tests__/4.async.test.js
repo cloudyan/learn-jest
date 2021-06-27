@@ -8,6 +8,7 @@ describe('异步操作测试',  () => {
   it('异步测试', (done) => {
     request((res) => {
       console.log(res);
+      expect(res).toEqual({code: 0, data: {}})
       done();
     });
   });
