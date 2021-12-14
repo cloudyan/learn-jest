@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "name": "example-class-mock",
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "babel-jest": "27.4.5",
+    "jest": "*",
+    "ts-jest": "27.1.1"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
