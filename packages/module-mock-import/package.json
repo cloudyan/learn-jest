@@ -1,12 +1,13 @@
 {
   "private": true,
   "version": "0.0.0",
-  "name": "example-module-mock",
+  "name": "example-module-mock-import",
   "devDependencies": {
     "@babel/core": "*",
     "@babel/preset-env": "*",
-    "babel-jest": "*",
-    "jest": "*"
+    "babel-jest": "27.4.5",
+    "jest": "*",
+    "ts-jest": "27.1.1"
   },
   "scripts": {
     "test": "jest"
